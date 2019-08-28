@@ -8,11 +8,10 @@
  */
 void get_path(char **arr, char *cadena, int counte, char **av)
 {
-	unsigned int i, len = 0, match, countpat = 0, l = 0, lc = 0, ld = 0;
+	unsigned int i = 0, len = 0, match, countpat = 0, l = 0, lc = 0, ld = 0;
 	listint_t *head;
 	char *s1  = "PATH\0", *token;
 
-	i = 0;
 	len = s_length(s1);
 	head = NULL;
 	while (environ[i] != NULL)
@@ -39,6 +38,7 @@ void get_path(char **arr, char *cadena, int counte, char **av)
 		}
 		i++;
 	}
+	current_path(arr);
 	free(cadena);
 	error_message(arr, counte, av);
 	free_em_all(arr);

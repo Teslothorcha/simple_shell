@@ -27,3 +27,19 @@ void exec_path(listint_t **head, char **commands)
 		execve((*head)->dir, commands, NULL);
 	}
 }
+/**
+ *current_path - check if executable exists on directory
+ *@arr: double pointer with possible executbale on it
+ */
+void current_path(char **arr)
+{
+	struct stat st;
+	int success;
+
+	success = stat(arr[0], &st);
+
+	if (success == 0)
+	{
+		execve(arr[0], arr, NULL);
+	}
+}

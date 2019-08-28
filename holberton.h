@@ -25,6 +25,7 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+void current_path(char **arr);
 void shell_1(char **cadena, int counte, char **av);
 void exec_path(listint_t **head, char **commands);
 int main(__attribute__ ((unused))int ac, char **av);
