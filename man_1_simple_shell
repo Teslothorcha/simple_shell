@@ -1,0 +1,55 @@
+.TH SIMPLE_SHELL 3 "28 August 2019" "0.4+" "Holberton Simple Shell"
+.SH NAME
+Simple_Shell - Command Line Interpreter
+.SH SYNOPSIS
+Shell is a interface that, we serve for communicate with the O.S
+.SS INVOCATION
+.I gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+
+You put in your terminal ./hsh
+.SH DESCRIPTION
+This shell function with the POSIX standard, interpreter command-line interpreter between kernel and the user, created to late of 1960s, Bell Laboratories, to Dennis Rithie and Ken Thompson and Brian Kernighan based on Multic O.S. It was though for they can bring computer to student university.
+.SH BUILTINS
+.B exit -
+Exit of the program
+
+.B env -
+Print enviroment variables
+.SH EXAMPLES OF USE
+.B Interactive
+.PP
+
+$ echo "qwerty" | /bin/sh
+
+.I /bin/sh: 1: qwerty: not found
+
+$ echo "qwerty" | /bin/../bin/sh
+
+.I /bin/../bin/sh: 1: qwerty: not found
+
+$
+
+.B Non-Interactive
+.PP
+
+$ echo "qwerty" | ./hsh
+
+.I ./hsh: 1: qwerty: not found
+
+$ echo "qwerty" | ./././hsh
+
+.I ./././hsh: 1: qwerty: not found
+
+$
+.SH SEE ALSO
+.I sh(1) bash(2)
+.SH REPORTING BUGS
+No known bugs.
+.PP
+Report shell bug to:
+
+939@holbertonschool.com
+
+946@holbertonschool.com
+.SH AUTHOR
+Written by Juan David, Santiago Yanguas.
