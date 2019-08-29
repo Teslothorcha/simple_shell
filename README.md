@@ -1,81 +1,69 @@
-# Shell
+<div align ="center">
+<img src="https://i.ibb.co/LkH3RWM/logo.png" alt="logo" border="0" height="320" width="280">
+</div>
 
-Shell is a interpreter command-line interpreter between kernel and the user, created to late of 1960s, Bell Laboratories, to Dennis Rithie and Ken Thompson and Brian Kernighan based on Multic O.S. It was though for they can bring computer to student university.
+# Simple-Shell
 
-<img src="https://i.ibb.co/fFKF6nz/pr.png" alt="pr" border="0">
+simple-shell is a interpreter command-line between kernel and the user mode for it can use the resources of the Operative System. This program is done, how final project of trimester of Holberton school for consolidate the theory and practice of the C programming language.  
+
+<img src="https://i.ibb.co/6RBnX9N/commands.png" alt="commands" border="0">
 
 ### Functions
 
-* aux_func.c
-   * handler - handles ctrl + c signal
-   * exec_path - check if executable exists on directory
-* error.m_.c
-   * error_message - compose the standar error message
-   * error_helper - sends char to write
-* free_.c
-   * free_em_all - will free double pointer
-   * print_env - prints all of the environment variables to the output
-   * free_listint - free list and sets head to NULL
-* get_path
-  * get_path - will searh if command exist on any of PATH's directories
-* holberton.h - Find all the headers and libraries
-* list_maker.c
-  * list_maker - add node initialize it and give it a string
-  * free_list - free list and sets head to NULL
-  * listint_len - list nodes of a list
-* shell_1.c
-  * shell_1 - part two of main function
-  * main - Initialization of the shell!
-* s_strings
-  * s_strdup - duplicate a string
-  * s_length - determine lenght of string
-  * s_strcopy - copy n bytes from one string to another
-  * strcmpn - compares n bytes in two strings
-  * slash - append slash and comannd to directory in linked list
-* tokenizer.c
-  * tokens - Divide a string with delimiter into tokens
+| **File** | **Description** |
+|----------|-----------------|
+| holberton.h | Contain all the libraries and functions created by us |
+| aux_func.c | **handler** - handles ctrl + c signal,  **exec_path** - check if executable exists on directory |
+| error.m_.c | **error_message** - compose the standar error message, **error_helper** - sends char to write |
+| free_.c | **free_em_all** - will free double pointer, **print_env** - prints all of the environment variables to the output, **free_listint** - free list and sets head to NULL |
+| get_path |  **get_path** - will searh if command exist on any of PATH's directories |
+| list_maker.c |   **list_maker** - add node initialize it and give it a string, **free_list** - free list and sets head to NULL, **listint_len** - list nodes of a list |
+| shell_1.c |   **shell_1** - Initiliaze the proccess and execute |
+| shell_.c | **main** - Initialization of the shell! |
+| s_strings.c | **s_strdup** - duplicate a string, **s_length** - determine lenght of string, **s_strcopy** - copy n bytes from one string to another, **strcmpn** - compares n bytes in two strings **slash** - append slash and comannd to directory in linked list
+  | tokenizer.c | **tokens** - Divide a string with delimiter into tokens
 
-## Tasks
+## Objectives
 
-#####  README, man, AUTHORS mandatory
+- [x] manpage - Technical manual about the simple shell
+- [x] Display:
+* The posible command to enter "ls"
+* Wait and hear to other command for example; "pwd"
+* After the mini-shell follow a new line "\n".
 
-*    Write a README
-*    Write a man for your shell.
-*    You should have an AUTHORS file at the root of your repository.
+- [x] Print the $ at the init for know if is inside of the shell and after wait to the follow command, if the user doesn't write exit or EOF.
+- [x] If executable not is found with stat, print a error message and return error with POSIX.
+- [x] Handle errors in case that some function fail to execute
+- [x] Handle the EOF "End of File" the which verify
+- [x] Handle mode non-interactive
+- [x] exit builtin - It does that the program end the proccess
+- [x] env builtin that print the current enviroment
 
-#####  Betty would be proud mandatory
+## Requeriments
 
-Write a beautiful code that passes the Betty checks
+* Ubuntu 14.04 LTS or greater
+* gcc 4.8.4
 
-#####  Write a UNIX command line interpreter.
+### Install
 
-Your Shell should:
 
-* Display a prompt and wait for the user to type a command. A command line always ends with a new line.
-*    The prompt is displayed again each time a command has been executed.
-*    The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
-*    The command lines are made only of one word. No arguments will be passed to programs.
-*    If an executable cannot be found, print an error message and display    the prompt again.
-*    Handle errors.
-*    You have to handle the “end of file” condition (Ctrl+D)
+1. Clone this repository: git clone "https://github.com/Teslothorcha/simple_shell"
+2. Change directories into the repository: cd simple_shell
+3. Compile: gcc with flags
+4. Execute ./nameofexecutable
 
-#####  Simple shell 0.2
+<img src="https://i.ibb.co/1nzQ612/Install.png" alt="Install" border="0">
 
-Simple shell 0.1 +
 
-*    Handle command lines with arguments
+#### Modes of execute shell
 
-##### Simple shell 0.3 +
+##### Interactive mode:
 
-*    Implement the exit built-in, that exits the shell
-*    Usage: exit
-*    You don’t have to handle any argument to the built-in exit
+<img src="https://i.ibb.co/J55NBNV/Interactive-mode.png" alt="Interactive-mode" border="0">
 
-##### Simple shell 1.0 mandatory
+##### Non-Interactive mode:
 
-Simple shell 0.4 +
-
-*   Implement the env built-in, that prints the current environment
+<img src="https://i.ibb.co/0XV1BBm/Non-Interactive.png" alt="Non-Interactive" border="0">
 
 ### Blog
 
@@ -87,26 +75,10 @@ https://medium.com/@ToqYang/what-happens-when-you-type-ls-l-in-the-shell-d28b88e
 
 https://medium.com/@ToqYang/how-write-your-own-manpage-d0d3b6528775?source=friends_link&sk=751b24abdf5878af303f7f2f6a753d1f
 
-## Requeriments
 
-All your files will be compiled on Ubuntu 14.04 LTS
-Your C programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+### Flow Chart
 
-It is checked using betty-style.pl and betty-doc.pl
-
-### Install
-
-
-1. Clone this repository: git clone "https://github.com/Teslothorcha/simple_shell"
-2. Change directories into the repository: cd simple_shell
-3. Compile: gcc with flags
-
-<img src="https://i.ibb.co/nPR1nJS/compilation.png" alt="compilation" border="0">
-
-#### Modes of execute shell
-
-
-<img src="https://i.ibb.co/GsNqy27/mode.png" alt="mode" border="0">
+<img src="https://i.ibb.co/FJXkprL/My-First-Board.jpg" alt="My-First-Board" border="0">
 
 ## Social
 
